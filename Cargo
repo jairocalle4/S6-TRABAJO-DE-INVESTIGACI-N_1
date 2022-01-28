@@ -1,0 +1,16 @@
+class Cargo:
+    secuenciaCargo = 2
+    cargos = [{"codigo":1,"cargo":"Analista"},{"codigo":2,"cargo":"Jefe"}]
+    def __init__(self,defin_cargo):
+        Cargo.secuenciaCargo += 1
+        self.cargocd = Cargo.secuenciaCargo
+        self.defin_cargo = defin_cargo
+
+    def regis_defin_cargo(self):
+        return {"codigo":self.cargocd,"cargo":self.defin_cargo}
+
+    def mostrar_defin_cargo(self):
+        print("{} - {}".format(self.cargocd,self.defin_cargo))
+
+    def datos_defin_cargo(self):
+        return [self.cargocd,self.defin_cargo]
