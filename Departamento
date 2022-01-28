@@ -1,0 +1,18 @@
+     
+class Departamento:
+    secuenciaDep = 2
+    departamentos = [{"codigo":1,"departamento":"Bodega"},{"codigo":2,"departamento":"Gerencia"}]
+    def __init__(self,def_departamento):
+        Departamento.secuenciaDep += 1
+        self.codigo_def_departamento = Departamento.secuenciaDep
+        self.def_departamento = def_departamento
+
+    def registro_def_departamento(self):
+        return {"codigo":self.codigo_def_departamento,"departamento":self.def_departamento}
+
+    def mostrar_defin_cargo(self):
+        print("{} - {}".format(self.codigo_def_departamento,self.def_departamento))
+
+    def datos_defin_cargo(self):
+        return [self.codigo_def_departamento,self.def_departamento]
+    
