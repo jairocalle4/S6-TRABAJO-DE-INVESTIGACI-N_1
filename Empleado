@@ -1,0 +1,25 @@
+from Cargo import Cargo
+from Departamento import Departamento
+
+
+class Empleado:
+    secuencia_e = 2
+    empleados = [{"codigo":1,"nombre":"Jairo","cedula":"0929433514","cargo":1,"departamento":1,"sueldo":600.25}]
+
+    def __init__(self,nombre,cedula,codCargo,codDepartamento,sueldo):
+        Empleado.secuencia_e += 1
+        self.codigo = Empleado.secuencia_e
+        self.nombre = nombre
+        self.cedula = cedula
+        self.cargo = codCargo
+        self.departamento = codDepartamento
+        self.sueldo = sueldo
+
+    def mostrar_e(self):
+            print("{} - {} - {} - {}".format(self.codigo,self.nombre,self.cedula,self.cargo,self.departamento))
+
+    def registro_e(self):
+        return{"codigo":self.codigo,"nombre":self.nombre,"cedula":self.cedula,"cargo":self.cargo,"departamento":self.departamento,"sueldo":self.sueldo}
+
+
+
